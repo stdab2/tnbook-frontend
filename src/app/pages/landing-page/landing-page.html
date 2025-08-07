@@ -1,158 +1,20 @@
-<section class="flex flex-col lg:flex-row items-center gap-10 px-6 py-10 max-w-screen-xl mx-auto">
-  <div class="flex-1">
-    <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-[#e6f9ee] text-[#1dd762] text-sm font-medium mb-4">
-      <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13 2L3 14h7v8l10-12h-7V2z" />
-      </svg>
-      3x Higher Response Rates
+<div class="min-h-screen">
+    <div id="hero">
+        <app-hero-section></app-hero-section>
     </div>
-
-    <h1 class="text-3xl md:text-5xl font-bold leading-tight text-gray-900 mb-4">
-      Get <span class="text-[#1dd762]">3x More Appointments</span> with<br />
-      WhatsApp Quick Reply Buttons
-    </h1>
-
-    <p class="text-gray-600 text-xl font-normal">
-      You select time slots. We send them as tap-to-book WhatsApp buttons.
-      No links, no friction, instant booking.
-    </p>
-
-    <div class="flex gap-8 py-4 mt-10">
-        <div class="text-center">
-            <div class="text-[#1dd762] text-2xl font-bold">98%</div>
-            <div class="text-sm">Open Rate</div>
-        </div>
-        <div class="text-center">
-            <div class="text-[#1dd762] text-2xl font-bold">2,847</div>
-            <div class="text-sm">Bookings This Month</div>
-        </div>
-        <div class="text-center">
-            <div class="text-[#1dd762] text-2xl font-bold">500+</div>
-            <div class="text-sm">Happy Users</div>
-        </div>
+    <div id="problem-solution">
+        <app-problem-solution></app-problem-solution>
     </div>
-
-    <div class="flex gap-8 py-4 mt-10">
-        <button class="cursor-pointer flex items-center gap-1 bg-[#1dd762] text-[#ffffff] font-medium rounded-lg text-sm px-4 py-2 hover:bg-[#1abc55] shadow-medium transition-all duration-300 transform hover:scale-105">
-            <mat-icon>chat</mat-icon>
-            Start Free Trial
-        </button>
-        <button class="cursor-pointer flex items-center gap-1 bg-[#000000] text-[#ffffff] font-medium rounded-lg text-sm px-4 py-2 shadow-medium transition-all duration-300 transform hover:scale-105">
-            <mat-icon>calendar_today</mat-icon>
-            Watch Demo
-        </button>
+    <div id="how-it-works">
+        <app-how-it-works></app-how-it-works>
     </div>
-  </div>
-
-  <div class="flex-1">
-    <img src="hero-image.png" alt="principal image" class="w-full max-w-2xl rounded-3xl mx-auto" />
-  </div>
-</section>
-
-<section class="flex flex-col bg-white py-10 px-4">
-    <div class="flex flex-col items-center gap-7">
-        <h1 class="text-4xl font-bold">Why Your Prospects Ignore <span class="text-red-600">Calendly Links</span></h1>
-        <p class="text-gray-600 text-xl font-normal">
-            Traditional scheduling tools create friction. WhatsApp eliminates it.
-        </p>
+    <div id="features">
+        <app-features></app-features>
     </div>
-    <div class="flex justify-center gap-10 mt-5">
-        <div class="flex flex-col border border-red-700 bg-red-50 p-10 rounded-xl items-start space-y-6">
-            <div>
-                <h1 class="text-2xl font-bold flex items-center gap-2">
-                    <mat-icon>close</mat-icon>
-                    The Old Way
-                </h1>
-            </div>
-            <div class="space-y-2">
-                <h1 class="font-bold flex items-center gap-2">
-                    <mat-icon>close</mat-icon>
-                    67% Never Click Calendly Links
-                </h1>
-                <p class="text-gray-700">
-                    External links feel impersonal and suspicious
-                </p>
-            </div>
-            <div class="space-y-2">
-                <h1 class="font-bold flex items-center gap-2">
-                    <mat-icon>close</mat-icon>
-                    Multiple Steps = Drop-off
-                </h1>
-                <p class="text-gray-700">
-                    Click link → New app → Create account → Book
-                </p>
-            </div>
-            <div class="space-y-2">
-                <h1 class="font-bold flex items-center gap-2">
-                    <mat-icon>close</mat-icon>
-                    Lost in Email
-                </h1>
-                <p class="text-gray-700">
-                    Confirmations get buried in inbox
-                </p>
-            </div>
-            <div class="space-y-2">
-                <h1 class="font-bold flex items-center gap-2">
-                    <mat-icon>close</mat-icon>
-                     No Personal Touch
-                </h1>
-                <p class="text-gray-700">
-                    Generic booking experience
-                </p>
-            </div>
-            <div class="bg-red-200 rounded-lg p-4 text-center">
-                <p class="text-2xl font-bold text-destructive">33%</p>
-                <p class="text-sm text-muted-foreground">Average Conversion Rate</p>
-            </div>
-        </div>
-
-        <div class="flex flex-col border border-green-700 bg-green-50 p-10 rounded-xl items-start space-y-6">
-            <div>
-                <h1 class="text-2xl font-bold flex items-center gap-2">
-                    <mat-icon>check</mat-icon>
-                    The WhatsBook Way
-                </h1>
-            </div>
-            <div class="space-y-2">
-                <h1 class="font-bold flex items-center gap-2">
-                    <mat-icon>close</mat-icon>
-                    98% Open Rate
-                </h1>
-                <p class="text-gray-700">
-                    Everyone checks WhatsApp messages
-                </p>
-            </div>
-            <div class="space-y-2">
-                <h1 class="font-bold flex items-center gap-2">
-                    <mat-icon>close</mat-icon>
-                    One Tap Booking
-                </h1>
-                <p class="text-gray-700">
-                    Native poll interface they already know
-                </p>
-            </div>
-            <div class="space-y-2">
-                <h1 class="font-bold flex items-center gap-2">
-                    <mat-icon>close</mat-icon>
-                    Instant Confirmation
-                </h1>
-                <p class="text-gray-700">
-                    Response appears immediately in chat
-                </p>
-            </div>
-            <div class="space-y-2">
-                <h1 class="font-bold flex items-center gap-2">
-                    <mat-icon>close</mat-icon>
-                    Personal Connection
-                </h1>
-                <p class="text-gray-700">
-                    Continues your existing conversation
-                </p>
-            </div>
-            <div class="bg-green-200 rounded-lg p-4 text-center">
-                <p class="text-2xl font-bold text-destructive">94%</p>
-                <p class="text-sm text-muted-foreground">WhatsApp Conversion Rate</p>
-            </div>
-        </div>
+    <div id="pricing">
+        <app-pricing></app-pricing>
     </div>
-</section>
+    <div id="faq">
+        <app-faq></app-faq>
+    </div>
+</div>

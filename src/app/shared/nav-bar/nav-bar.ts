@@ -7,7 +7,27 @@ import { Component } from '@angular/core';
   styleUrl: './nav-bar.css'
 })
 export class NavBar {
-  feature() {
-    console.log('features');
+  navBarSections = [
+    {
+      id: 'how-it-works',
+      value: 'How It Works'
+    },
+    {
+      id: 'features',
+      value: 'Features'
+    },
+    {
+      id: 'pricing',
+      value: 'Pricing'
+    },
+    {
+      id: 'faq',
+      value: 'FAQ'
+    }
+  ]
+
+  scrollSmoothTo(value: string) {
+    const element = document.getElementById(value)!;
+    element.scrollIntoView({ behavior: 'smooth' });
   }
 }

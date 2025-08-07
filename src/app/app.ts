@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { afterNextRender, Component } from '@angular/core';
 import { NavBar } from './shared/nav-bar/nav-bar'
 import { initFlowbite } from 'flowbite';
 import { LandingPage } from "./pages/landing-page/landing-page";
@@ -11,6 +11,13 @@ import { LandingPage } from "./pages/landing-page/landing-page";
 })
 export class App {
   protected title = 'whatsbook';
+
+  constructor() {
+    afterNextRender(() => {
+      const element = document.getElementById('nav-bar')!;
+      element.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
   
   ngOnInit(): void {
     initFlowbite();
