@@ -6,6 +6,7 @@ import { HowItWorks } from './how-it-works/how-it-works';
 import { Features } from './features/features';
 import { Pricing } from './pricing/pricing';
 import { Faq } from './faq/faq';
+import { NavBar } from '../../shared/nav-bar/nav-bar'
 
 @Component({
   selector: 'app-landing-page',
@@ -16,7 +17,8 @@ import { Faq } from './faq/faq';
     HowItWorks,
     Features,
     Pricing,
-    Faq
+    Faq,
+    NavBar
   ],
   templateUrl: './landing-page.html',
   styleUrl: './landing-page.css'

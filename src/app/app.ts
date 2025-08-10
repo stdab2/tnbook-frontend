@@ -1,11 +1,10 @@
 import { afterNextRender, Component } from '@angular/core';
-import { NavBar } from './shared/nav-bar/nav-bar'
 import { initFlowbite } from 'flowbite';
-import { LandingPage } from "./pages/landing-page/landing-page";
+import { RouterOutlet } from "@angular/router";
 
 @Component({
   selector: 'app-root',
-  imports: [NavBar, LandingPage],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
