@@ -1,0 +1,44 @@
+@if(onVerificationMode) {
+    <div class="flex flex-col mt-4">
+        <p class="text-gray-700 text-center text-xl font-medium mb-2">
+            Enter the verification code sent to your email
+        </p>
+        <div class="flex flex-col justify-around gap-4 items-center">
+            <div class="flex flex-col">
+                <mat-form-field>
+                    <mat-label>code</mat-label>
+                    <input inputmode="numeric" maxlength="7" matInput [formControl]="verificationCode">
+                    <mat-error>this field is required</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-10 mb-2">
+                <button 
+                    class="flex justify-center cursor-pointer bg-[#1dd762] text-white font-medium rounded-lg text-sm px-4 py-2
+                        hover:bg-[#1abc55] shadow-md hover:shadow-lg transition-transform duration-300
+                        transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#1dd762]/30"
+                    aria-label="Verify code"
+                    (click)="onVerify()">
+                    <span>Verify code</span>
+                    @if(isVerifyLoading) {
+                        <mat-spinner diameter="20"></mat-spinner>
+                    }
+                </button>
+
+                <button 
+                    class="flex justify-center cursor-pointer bg-[#1dd762] text-white font-medium rounded-lg text-sm px-4 py-2
+                        hover:bg-[#1abc55] shadow-md hover:shadow-lg transition-transform duration-300
+                        transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#1dd762]/30
+                        disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none"
+                    aria-label="Resend code"
+                    [disabled]="isTimerStarted"
+                    (click)="onResendCode()">
+                    <p><span [hidden]="!isTimerStarted">{{ timeLeft }}</span> Resend code</p>
+                    @if(isResendingLoading) {
+                        <mat-spinner diameter="20"></mat-spinner>
+                    }
+                </button>
+            </div>
+        </div>
+    </div>
+}

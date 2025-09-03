@@ -1,4 +1,4 @@
-<div class="max-w-xl mx-auto flex flex-col space-y-25">
+<div class="max-w-xl mx-auto flex flex-col space-y-25 px-4">
     <div class="flex mt-5 justify-between">
         <a routerLink="/" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="icons8-message.svg" class="h-8" alt="WhatsBook Logo" />
@@ -18,35 +18,44 @@
             <h1 class="text-3xl font-bold">Start now</h1>
             <p class="text-gray-600 font-medium">Create your account in less than two minutes!</p>
         </div>
-        <div [formGroup]="signupForm">
+        <div class="space-y-4" [formGroup]="signupForm">
             <div class="flex flex-col w-full">
                 <mat-label>Email</mat-label>
-                <mat-form-field>
+                <mat-form-field subscriptSizing="dynamic">
                     <input type="email" matInput formControlName="email">
+                    <mat-error>this field is required and must have a valid format.</mat-error>
                 </mat-form-field>
             </div>
             <div class="flex flex-col w-full">
                 <mat-label>Password</mat-label>
-                <mat-form-field>
+                <mat-form-field subscriptSizing="dynamic">
                     <input type="password" matInput formControlName="password">
+                    <mat-error>this field is required</mat-error>
                 </mat-form-field>
             </div>
-            <button class="cursor-pointer w-full gap-1 bg-[#1dd762] text-white font-medium rounded-lg text-sm px-4 py-2
+            <button class="flex justify-center cursor-pointer w-full gap-1 bg-[#1dd762] text-white font-medium rounded-lg text-sm px-4 py-2
              hover:bg-[#1abc55] shadow-md hover:shadow-lg transition-transform duration-300
              transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#1dd762]/30"
              aria-label="Sign up for WhatsBook"
+             [disabled]="onVerificationMode"
+             (click)="onSignup()"
             >
-                Sign up
+                <span>Sign up</span>
+                @if(isSignupLoading) {
+                    <mat-spinner diameter="20"></mat-spinner>
+                }
             </button>
             <div class="flex items-center justify-center my-4">
                 <div class="flex-grow border-t border-gray-300"></div>
                 <span class="mx-4 text-gray-400 text-sm font-medium">OR</span>
                 <div class="flex-grow border-t border-gray-300"></div>
             </div>
-            <button class="cursor-pointer w-full gap-1 bg-[#8b8b8b] text-white font-medium rounded-lg text-sm px-4 py-2
-             hover:bg-[#525252]"
-            >
-                Google
+            <button
+                (click)="signupWithProvider(AuthProvider.google)"
+                class="cursor-pointer flex items-center justify-center gap-2 w-full px-4 py-2 rounded-lg text-white font-semibold bg-[#4285F4] hover:bg-[#357ae8] transition"
+                >
+                <img src="icons8-google.svg" alt="Google" class="w-5 h-5 bg-white rounded-full p-0.5" />
+                <span>Sign up with Google</span>
             </button>
         </div>
     </div>
